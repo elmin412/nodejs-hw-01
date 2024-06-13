@@ -1,5 +1,5 @@
 import { PATH_DB } from '../constants/contacts.js';
-import fs from 'fs/promises';
+import fs from 'node:fs/promises';
 
 export const countContacts = async () => {
     try {
