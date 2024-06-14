@@ -6,8 +6,9 @@ export const getAllContacts = async () => {
     try {
         const data = await fs.readFile(PATH_DB, 'utf-8');
         const dbData = JSON.parse(data);
-        return dbData.contacts;
+        
 
+        return dbData;
 
     } catch (err) {
         console.error('Error', err );

@@ -7,8 +7,8 @@ export const removeLastContact = async () => {
     const data = await fs.readFile(PATH_DB, 'utf-8');
     const dbData = JSON.parse(data);
 
-    if(dbData.contacts &&  dbData.contacts.length > 0) {
-        dbData.contacts.pop();
+    if(dbData &&  dbData.length > 0) {
+        dbData.pop();
 
         await fs.writeFile(PATH_DB, JSON.stringify(dbData, null, 2), 'utf-8');
     }
